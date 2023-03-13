@@ -11,7 +11,9 @@ void printTable(){
         }
         printf("\n");
     }
+    printf("-----------------------------");
 }
+
 
 int main() {
     printTable();
