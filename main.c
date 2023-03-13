@@ -15,7 +15,16 @@ void printTable(){
 }
 
 
+
 int main() {
-    printTable();
+    printf("BENVENUTI IN FORZA4\n\n");
+
+    char g1[20], g2[20];
+    printf("Giocatore 1 :");
+    scanf("%s", &g1);
+
+    printf("Giocatore 2 :");
+    scanf("%s", &g2);
+
     return 0;
 }
