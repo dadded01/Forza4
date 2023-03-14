@@ -151,6 +151,32 @@ int checkWin(){
     for (int i = 5; i >=3; --i) {
         if(mat[i][0]==2 && mat[i-1][1]==2 && mat[i-2][2]==2 && mat[i-3][3]==2) vittoria = 2;
     }
+    //controlli obliqui (basso destra -> alto sinistra) giocatore 1
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][3]==1 && mat[i-1][2]==1 && mat[i-2][1]==1 && mat[i-3][0]==1) vittoria = 1;
+    }
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][4]==1 && mat[i-1][3]==1 && mat[i-2][2]==1 && mat[i-3][1]==1) vittoria = 1;
+    }
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][5]==1 && mat[i-1][4]==1 && mat[i-2][3]==1 && mat[i-3][2]==1) vittoria = 1;
+    }
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][6]==1 && mat[i-1][5]==1 && mat[i-2][4]==1 && mat[i-3][3]==1) vittoria = 1;
+    }
+    //controlli obliqui (basso destra -> alto sinistra) giocatore 2
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][3]==2 && mat[i-1][2]==2 && mat[i-2][1]==2 && mat[i-3][0]==2) vittoria = 2;
+    }
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][4]==2 && mat[i-1][3]==2 && mat[i-2][2]==2 && mat[i-3][1]==2) vittoria = 2;
+    }
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][5]==2 && mat[i-1][4]==2 && mat[i-2][3]==2 && mat[i-3][2]==2) vittoria = 2;
+    }
+    for (int i = 5; i >=3; --i) {
+        if(mat[i][6]==2 && mat[i-1][5]==2 && mat[i-2][4]==2 && mat[i-3][3]==2) vittoria = 2;
+    }
     return vittoria;
 }
 
