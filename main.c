@@ -37,6 +37,7 @@ void printTable(){
     for (int i = 0; i < COLONNE; ++i) {
         printf("  %d ", i+1);
     }
+    printf("\n");
 }
 
 int checkWin(){
@@ -98,6 +99,7 @@ void turnP1(char *giocatore){
     else if(mat[0][scelta]==0) mat[0][scelta] = 1;
 
     if(checkWin()==1){
+        printTable();
         printf("%s HAI VINTO\n", giocatore);
         exit(0);
     }
@@ -116,6 +118,7 @@ void turnP2(char *giocatore){
     else if(mat[0][scelta]==0) mat[0][scelta] = 2;
 
     if(checkWin()==2){
+        printTable();
         printf("%s HAI VINTO\n", giocatore);
         exit(0);
     }
@@ -132,11 +135,9 @@ void play(int win, char *g1, char *g2){
 
 int main() {
     int win = 0;
-    printMatrix();
+    initMatrix();
 
-
-    printTable();
-    printf("BENVENUTI IN FORZA4\n\n");
+    printf("\nBENVENUTI IN FORZA4\n\n");
 
     char g1[20], g2[20];
     printf("Giocatore 1 :");
@@ -144,6 +145,7 @@ int main() {
 
     printf("Giocatore 2 :");
     scanf("%s", &g2);
+    printTable();
 
     while(1){play(win, g1, g2);}
 
